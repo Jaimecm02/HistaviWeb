@@ -1,18 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Home from '../components/Home.astro';
 import About from '../components/About.astro';
 import Methodology from '../components/Methodology.astro';
 import Visualization from '../components/Visualization.astro'
 import Models from '../components/Models.astro'
 import Tools from '../components/Tools.astro'
+import Setup from '../components/Setup.astro';
+import Usage from '../components/Usage.astro'
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
-	<About />
-	<Methodology />
-	<Visualization />
-	<Models />
-	<Tools />
+	<section id="home">
+		<Home />
+	</section>
+	<section id="about">
+		<About />
+	</section>
+	<section id="methodology">
+		<Methodology />
+	</section>
+	<section id="visualization">
+		<Visualization />
+	</section>
+	<section id="models">
+		<Models />
+	</section>
+	<section id="tools">
+		<Tools />
+	</section>
+	<section id="setup">
+		<Setup />
+	</section>
+	<section id="usage">
+		<Usage />
+	</section>
 </Layout>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+</style>

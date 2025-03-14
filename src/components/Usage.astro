@@ -1,0 +1,51 @@
+<section id="tools" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Usage Instructions</h2>
+
+      <div class="max-w-4xl mx-auto space-y-8">
+          <div class="bg-black p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-white mb-2">Image Registration</h3>
+              <p class="text-gray-300"><span class="font-semibold text-blue-400">iso-registration.py</span></p>
+              <ul class="list-disc list-inside text-gray-400 mt-2 space-y-1">
+                  <li><span class="font-semibold text-green-400">Inputs:</span> Two .mha files</li>
+                  <li><span class="font-semibold text-yellow-400">Outputs:</span> Registered .npy volumes with:</li>
+                  <ul class="list-disc list-inside pl-4 text-gray-400">
+                      <li>Isometric voxels</li>
+                      <li>Rotation correction</li>
+                      <li>Optional centerline transformation</li>
+                  </ul>
+              </ul>
+          </div>
+          
+          <div class="bg-black p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-white mb-2">Models Visualization & Data Extraction</h3>
+              <p class="text-gray-300"><span class="font-semibold text-blue-400">viewer.py</span></p>
+              <ul class="list-disc list-inside text-gray-400 mt-2 space-y-1">
+                  <li><span class="font-semibold text-green-400">Inputs:</span> Registered NumPy volumes, centerline (Optional)</li>
+                  <li>Creates interactive image viewer</li>
+                  <li><span class="font-semibold text-yellow-400">Outputs:</span> Generates dataframes with:</li>
+                  <ul class="list-disc list-inside pl-4 text-gray-400">
+                      <li>Deformation ratios</li>
+                      <li>Color-coded section analysis</li>
+                      <li>Optional centerline reference</li>
+                  </ul>
+              </ul>
+          </div>
+          
+          <div class="bg-black p-6 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold text-white mb-2">Dashboard Visualization</h3>
+              <p class="text-gray-300"><span class="font-semibold text-blue-400">dash_viewer.py</span></p>
+              <ul class="list-disc list-inside text-gray-400 mt-2 space-y-1">
+                  <li><span class="font-semibold text-green-400">Inputs:</span> Dataframes from viewer.py</li>
+                  <li>Provides interactive dashboard with:</li>
+                  <ul class="list-disc list-inside pl-4 text-gray-400">
+                      <li>Sections view</li>
+                      <li>Statistical analysis</li>
+                      <li>Color count bar graphs</li>
+                      <li>Multi-case comparison tool</li>
+                  </ul>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
