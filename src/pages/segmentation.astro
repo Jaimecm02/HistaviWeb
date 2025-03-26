@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="bg-black py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold text-white mb-8 text-center">Aortic Root Segmentation</h1>
+      
+      <div class="max-w-4xl mx-auto text-gray-300 space-y-6">
+        
+        <h2 class="text-3xl font-bold text-white mt-8 mb-4">Imaging Analysis Framework</h2>
+        <p class="text-lg">
+          Our sophisticated segmentation methodology represents a cutting-edge approach to analyzing cardiovascular morphology through precise medical imaging techniques. By focusing on high-resolution CT scans captured before and six months after Transcatheter Aortic Valve Replacement (TAVR), we create a powerful diagnostic tool for understanding complex aortic root deformations and post-procedural anatomical changes.
+        </p>
+        
+        <div class="p-4 rounded-lg">
+          <p class="text-yellow-400 font-bold">Research Objective</p>
+          <p class="text-gray-300">Develop a computational method for precise anatomical characterization and quantitative analysis of aortic root structures before and after interventional procedures.</p>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mt-8 mb-4">Anatomical Segmentation Strategy</h2>
+        <p class="text-lg">
+          Our meticulous segmentation process employs advanced computational techniques to precisely isolate and extract critical cardiovascular structures with high accuracy:
+        </p>
+        <div class="p-4 rounded-lg">
+          <h3 class="text-xl font-semibold text-white mb-4">Targeted Anatomical Structures</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li><strong class="text-yellow-400">Aortic Root:</strong> Primary focus for detailed morphological analysis</li>
+            <li><strong class="text-yellow-400">Left Ventricle:</strong> Comprehensive assessment of ventricular geometry</li>
+            <li><strong class="text-yellow-400">Left Atrium and Mitral Valve:</strong> Detailed evaluation of atrial structures</li>
+            <li><strong class="text-yellow-400">TAVR Device:</strong> Precise localization and characterization of implanted device</li>
+          </ul>
+        </div>
+        
+        <h3 class="text-xl font-semibold text-white mt-4">Segmentation Methodology</h3>
+        <p>
+          After structure isolation, our advanced model implements a strategic sectioning approach. The model is precisely cut, leaving a minimal margin beneath the TAVR device to optimize visualization. This technique strategically exposes the critical conduction system located in the membranous septum, providing unprecedented insights into cardiac microarchitecture.
+        </p>
+        
+        <p class="mt-4">
+          <a href="https://www.casestacks.com/medical-school/radiographic-anatomy/cardiac/" class="text-yellow-300 underline hover:text-blue-200 transition-colors">Supplementary Visual Guide to Cardiac Anatomy</a>
+        </p>
+        
+        <h2 class="text-3xl font-bold text-white mt-8 mb-4">Patient Selection Criteria</h2>
+        <div class="p-4 rounded-lg">
+          <h3 class="text-xl font-semibold text-white mb-4">Inclusion Parameters</h3>
+          <ul class="list-disc list-inside text-gray-300 space-y-3">
+            <li>
+              <strong class="text-yellow-400">Pre-Surgical Screening:</strong> Absence of Mitral Clip Procedure (MCP) prior to intervention
+              <p class="text-sm text-gray-400 ml-4">Ensures minimal procedural interference and baseline anatomical integrity</p>
+            </li>
+            <li>
+              <strong class="text-yellow-400">Artifact Minimization Protocol:</strong> Stringent quality control for TAVR and MCP-related imaging artifacts
+              <p class="text-sm text-gray-400 ml-4">Guarantees high-fidelity image reconstruction and analysis</p>
+            </li>
+            <li>
+              <strong class="text-yellow-400">Visualization Optimization:</strong> Prioritize exceptional visualization of Transapical Surgical Valve Implantation (TSVI)
+              <p class="text-sm text-gray-400 ml-4">Enables comprehensive assessment of procedural outcomes</p>
+            </li>
+            <li>
+              <strong class="text-yellow-400">Image Integrity Verification:</strong> Validation of pre-implantation CT image completeness
+              <p class="text-sm text-gray-400 ml-4">Eliminates datasets with significant artifacts or discontinuities</p>
+            </li>
+            <li>
+              <strong class="text-yellow-400">Cardiac Phase Standardization:</strong> Fixed cardiac phase at 75% of cardiac cycle
+              <p class="text-sm text-gray-400 ml-4">Ensures consistent comparative analysis across different patient datasets</p>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-900 p-4 rounded-lg mt-6">
+          <h3 class="text-blue-400 font-bold mb-4">🖼️ Artifact Documentation</h3>
+          <p class="text-gray-300">A carousel of artifact examples will be integrated to provide visual context for image quality assessment and potential challenges in segmentation.</p>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-white mt-8 mb-4">TAVR Device Analysis</h2>
+        <div class="bg-gray-800 p-4 rounded-lg">
+          <h3 class="text-xl font-semibold text-white mb-4">Comparative Device Morphology Study</h3>
+          <p class="text-gray-300">A detailed visualization and comparative analysis of various TAVR device models will be presented, highlighting structural variations and potential implications for patient outcomes.</p>
+          <p class="text-gray-400 mt-2 italic">Detailed device model diagram to be integrated</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
