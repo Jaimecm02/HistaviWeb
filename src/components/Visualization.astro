@@ -1,52 +1,80 @@
-<section id="visualization" class="py-20 bg-neutral-900">
-    <div class="container mx-auto px-4">
+---
+import { Image } from "astro:assets";
+import threeDimensionalImage from "../assets/3d_visualization.png";
+import dataDashboardImage from "../assets/statistical-analysis.png";
+---
+
+<section id="visualization" class="py-24 bg-neutral-950">
+  <div class="container mx-auto px-6">
+    <div class="mb-16">
       <h2 class="text-3xl font-bold text-white mb-2 text-center">Deformation Visualization</h2>
       <p class="text-gray-400 mb-16 text-center max-w-2xl mx-auto">
         Interactive visualization tools that render complex biomechanical data in an intuitive format
         for clinical interpretation and research analysis.
       </p>
-      
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- 3D Model Viewer -->
-        <div class="bg-black rounded-xl overflow-hidden shadow-xl">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-800">
-            <img src="src/assets/3d_visualization.png" alt="3D TAVR Deformation Model" class="w-full h-full object-cover" />
+    </div>
+    
+    <div class="flex flex-col gap-16">
+      <!-- 3D Model Viewer -->
+      <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 transform transition-all duration-300 hover:translate-y-[-8px]">
+        <div class="relative">
+          <div class="absolute top-0 right-0 bg-neutral-800 text-white text-xs font-semibold px-3 py-1 m-4 rounded-full">
+            3D VISUALIZATION
           </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-white mb-3">3D Deformation Mapping</h3>
-            <p class="text-gray-300 mb-4">
-              Our 3D visualization renders the anatomical models, centerlines & position of the TAVR. 
-              This allows for intuitive interpretation of deformation patterns
-              in relation to critical cardiac structures.
-            </p>
-            <div class="flex space-x-4">
-              <span class="px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">PyVista</span>
-              <span class="px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">SimpleITK</span>
-              <span class="px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">Matplotlib</span>
-              <span class="px-3 py-1 bg-blue-900 text-blue-300 rounded-full text-sm">3DSlicer</span>
-            </div>
+          <div class="aspect-video bg-neutral-800">
+            <Image src={threeDimensionalImage} alt="3D TAVR Deformation Model" class="w-full h-full object-cover" />
           </div>
         </div>
-        
-        <!-- Data Dashboard -->
-        <div class="bg-black rounded-xl overflow-hidden shadow-xl">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-800">
-            <img src="src/assets/statistical-analysis.png" alt="Deformation Data Dashboard" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-bold text-white mb-3">Quantitative Analysis Dashboard</h3>
-            <p class="text-gray-300 mb-4">
-              Interactive charts and data visualizations provide quantitative metrics for deformation analysis.
-              Compare strain patterns across different valve models, patient cohorts, and anatomical regions
-              with our customizable dashboard interface.
-            </p>
-            <div class="flex space-x-4">
-              <span class="px-3 py-1 bg-purple-900 text-purple-300 rounded-full text-sm">Matplotlib</span>
-              <span class="px-3 py-1 bg-purple-900 text-purple-300 rounded-full text-sm">Plotly</span>
-              <span class="px-3 py-1 bg-purple-900 text-purple-300 rounded-full text-sm">Dash</span>
-            </div>
+        <div class="p-8">
+          <h3 class="text-3xl font-bold text-white mb-4">3D Deformation Mapping</h3>
+          <div class="w-16 h-1 bg-gray-600 mb-6"></div>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Our 3D visualization renders the anatomical models, centerlines & position of the TAVR. 
+            This allows for intuitive interpretation of deformation patterns
+            in relation to critical cardiac structures.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">PyVista</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">SimpleITK</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Matplotlib</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">3DSlicer</span>
           </div>
         </div>
       </div>
+      
+      <!-- Data Dashboard -->
+      <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 transform transition-all duration-300 hover:translate-y-[-8px]">
+        <div class="relative">
+          <div class="absolute top-0 right-0 bg-neutral-800 text-white text-xs font-semibold px-3 py-1 m-4 rounded-full">
+            DATA ANALYSIS
+          </div>
+          <div class="aspect-video bg-neutral-800">
+            <Image src={dataDashboardImage} alt="Statistical Analysis Dashboard" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-3xl font-bold text-white mb-4">Quantitative Analysis Dashboard</h3>
+          <div class="w-16 h-1 bg-gray-600 mb-6"></div>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Interactive charts and data visualizations provide quantitative metrics for deformation analysis.
+            Compare pre and post-surgical strain patterns across different valve models, patient cohorts, 
+            and anatomical regions with our customizable dashboard interface.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-6">
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Matplotlib</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Plotly</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Dash</span>
+            <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">D3.js</span>
+          </div>
+          <a href="#" class="inline-flex items-center text-gray-400 hover:text-white transition-colors">
+            <span class="mr-2">Explore Dashboard</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>

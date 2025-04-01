@@ -1,109 +1,116 @@
-<section id="tools" class="py-20 bg-neutral-900">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-white mb-2 text-center">Software Tools</h2>
-      <p class="text-gray-400 mb-16 text-center max-w-2xl mx-auto">
-        Our research leverages powerful software solutions for biomedical modeling, 
-        image processing, and computational analysis of TAVR-induced deformations.
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Python -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-blue-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/python-logo.svg" alt="Python Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Python</h3>
-          <p class="text-gray-300 mb-4">
-            Core programming language for our data processing pipeline, analysis algorithms and visualization tools.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">Pandas</span>
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">Matplotlib</span>
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">NumPy</span>
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">SciPy</span>
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">SimpleITK</span>
-            <span class="px-3 py-1 bg-blue-900 text-blue-200 rounded-full text-sm">PyVista</span>
-          </div>
-        </div>
-        
-        <!-- 3D Slicer -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-purple-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/3D-slicer-logo.svg" alt="3D Slicer Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">3D Slicer</h3>
-          <p class="text-gray-300 mb-4">
-            Open-source software platform for medical image informatics, image processing, and three-dimensional visualization.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-purple-900 text-purple-200 rounded-full text-sm">Segmentation</span>
-            <span class="px-3 py-1 bg-purple-900 text-purple-200 rounded-full text-sm">Registration</span>
-            <span class="px-3 py-1 bg-purple-900 text-purple-200 rounded-full text-sm">3D Visualization</span>
-            <span class="px-3 py-1 bg-purple-900 text-purple-200 rounded-full text-sm">Centerline Extraction</span>
-          </div>
-        </div>
-        
-        <!-- Blender -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-orange-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/Logo_Blender.svg.png" alt="Blender Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Blender</h3>
-          <p class="text-gray-300 mb-4">
-            3D computer graphics open software for visualization of 3D models.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-orange-900 text-orange-200 rounded-full text-sm">Mesh Processing</span>
-            <span class="px-3 py-1 bg-orange-900 text-orange-200 rounded-full text-sm">Rendering</span>
-          </div>
-        </div>
-        
-        <!-- MicroDicom -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-green-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/micro-dicom-logo.webp" alt="microDicom Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">MicroDicom</h3>
-          <p class="text-gray-300 mb-4">
-            DICOM viewer and processing software for handling medical imaging data in the standardized DICOM format.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-green-900 text-green-200 rounded-full text-sm">DICOM Viewing</span>
-            <span class="px-3 py-1 bg-green-900 text-green-200 rounded-full text-sm">Image Processing</span>
-            <span class="px-3 py-1 bg-green-900 text-green-200 rounded-full text-sm">Data Conversion</span>
-          </div>
-        </div>
-        
-        <!-- Astro -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-red-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/astro-logo-light.svg" alt="Astro Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Astro</h3>
-          <p class="text-gray-300 mb-4">
-            Modern web framework for building fast, content-focused websites. Used for developing this web.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-red-900 text-red-200 rounded-full text-sm">Web Development</span>
-            <span class="px-3 py-1 bg-red-900 text-red-200 rounded-full text-sm">Component Islands</span>
-            <span class="px-3 py-1 bg-red-900 text-red-200 rounded-full text-sm">Static Site Generation</span>
-          </div>
-        </div>
+---
+import { Image } from 'astro:assets';
+import pythonLogo from '../assets/python-logo.svg';
+import slicerLogo from '../assets/3D-slicer-logo.svg';
+import blenderLogo from '../assets/Logo_Blender.svg.png';
+import microDicomLogo from '../assets/micro-dicom-logo.webp';
+import astroLogo from '../assets/astro-logo-light.svg';
+import tailwindLogo from '../assets/Tailwind_CSS_Logo.svg.png';
+import { middleware } from 'astro/virtual-modules/i18n.js';
 
-        <!-- Tailwind -->
-        <div class="bg-black p-6 rounded-xl shadow-lg hover:shadow-yellow-700/20 hover:shadow-xl transition-shadow duration-300">
-          <div class="flex items-center justify-center h-24 mb-6">
-            <img src="../src/assets/Tailwind_CSS_Logo.svg.png" alt="Tailwind Logo" class="max-h-full" />
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Tailwind</h3>
-          <p class="text-gray-300 mb-4">
-            Modern web framework styling websites.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-yellow-900 text-yellow-100 rounded-full text-sm">Web Development</span>
-            <span class="px-3 py-1 bg-yellow-900 text-yellow-100 rounded-full text-sm">Website Design</span>
-          </div>
-        </div>       
+---
+
+<section id="tools" class="py-20 bg-gradient-to-br from-black to-neutral-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-white mb-2 text-center">Software Tools</h2>
+    <p class="text-gray-400 mb-16 text-center max-w-2xl mx-auto">
+      Our research leverages powerful software solutions for biomedical modeling, 
+      image processing, and computational analysis of TAVR-induced deformations.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Python -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={pythonLogo} alt="Python Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Python</h3>
+        <p class="text-gray-400 mb-4">
+          Core programming language for our data processing pipeline, analysis algorithms, and visualization tools.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Pandas</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Matplotlib</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">NumPy</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">SciPy</span>
+        </div>
       </div>
+
+      <!-- 3D Slicer -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={slicerLogo} alt="3D Slicer Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">3D Slicer</h3>
+        <p class="text-gray-400 mb-4">
+          Open-source software platform for medical image informatics, image processing, and three-dimensional visualization.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Segmentation</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Registration</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">3D Visualization</span>
+        </div>
+      </div>
+
+      <!-- Blender -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={blenderLogo} alt="Blender Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Blender</h3>
+        <p class="text-gray-400 mb-4">
+          3D computer graphics open software for visualization of 3D models.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Mesh Processing</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Rendering</span>
+        </div>
+      </div>
+
+      <!-- MicroDicom -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={microDicomLogo} alt="MicroDicom Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">MicroDicom</h3>
+        <p class="text-gray-400 mb-4">
+          DICOM viewer and processing software for handling medical imaging data in the standardized DICOM format.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">DICOM Viewing</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Image Processing</span>
+        </div>
+      </div>
+
+      <!-- Astro -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={astroLogo} alt="Astro Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Astro</h3>
+        <p class="text-gray-400 mb-4">
+          Modern web framework for building fast, content-focused websites. Used for developing this web.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Web Development</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Static Site Generation</span>
+        </div>
+      </div>
+
+      <!-- Tailwind -->
+      <div class="bg-neutral-900 p-6 rounded-xl shadow-md hover:shadow-gray-300/40 transition-shadow duration-300">
+        <div class="flex items-center justify-center h-24 mb-6">
+          <Image src={tailwindLogo} alt="Tailwind Logo" class="max-h-full object-contain" />
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Tailwind</h3>
+        <p class="text-gray-400 mb-4">
+          Modern web framework styling websites.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Web Development</span>
+          <span class="px-4 py-2 bg-neutral-800 text-gray-300 rounded-lg text-sm font-medium">Website Design</span>
+        </div>
+      </div>       
     </div>
-  </section>
+  </div>
+</section>

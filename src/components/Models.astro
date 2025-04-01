@@ -1,4 +1,11 @@
-<section id="tavr-models" class="py-20 bg-black">
+---
+import {Image} from 'astro:assets';
+import evolutImage from '../assets/CoreValve-Evolut-Pro.webp';
+import acurateImage from '../assets/ACURATE_neo2.png';
+import edwardsImage from '../assets/Edwards.avif';
+---
+
+<section id="tavr-models" class="py-20 bg-gradient-to-br from-neutral-800 to-black">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-white mb-2 text-center">TAVR Models Studied</h2>
       <p class="text-gray-400 mb-16 text-center max-w-2xl mx-auto">
@@ -8,10 +15,10 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <!-- Model 1 -->
+        <!-- CoreValve Evolut -->
         <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
           <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
-            <img src="src/assets/CoreValve-Evolut-Pro.webp" alt="Medtronic CoreValve" class="max-h-full" />
+            <Image src={evolutImage} alt="Medtronic CoreValve" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-white mb-2">Medtronic CoreValve</h3>
@@ -21,10 +28,10 @@
           </div>
         </div>
         
-        <!-- Model 2 -->
+        <!-- Acurate Neo -->
         <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
           <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
-            <img src="../src/assets/acurate_drawing.svg" alt="Boston Scientific ACURATE neo" class="max-h-full" />
+            <Image src={acurateImage} alt="Boston Scientific ACURATE neo" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-white mb-2">Boston Scientific ACURATE neo</h3>
@@ -34,10 +41,10 @@
           </div>
         </div>
 
-        <!-- Model 3 -->
+        <!-- Edwards Sapien -->
         <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
           <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
-            <img src="src/assets/Edwards.avif" alt="Edwards SAPIEN Valve" class="max-h-full" />
+            <Image src={edwardsImage} alt="Edwards SAPIEN Valve" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-white mb-2">Edwards SAPIEN</h3>

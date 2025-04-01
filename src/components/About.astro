@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import hisImage from '../assets/his.png';
+---
+
 <section id="about" class="py-20 bg-neutral-900 bg-">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row items-center">
@@ -12,8 +17,8 @@
             techniques to predict and potentially prevent complications that lead to permanent pacemaker implantation.
           </p>
           </div>
-          <div class="md:w-1/2 mb-10 md:mb-0 ">
-            <img src="../src/assets/his.png" alt="TAVR Procedure Illustration" class="rounded-lg" />
+          <div class="md:w-1/2 ml-5 mb-10 md:mb-0 ">
+            <Image src={hisImage} alt="His Illustration" class="rounded-lg" />
           </div>
         </div>
       </div>

@@ -3,4 +3,12 @@
 @theme {
     --color-gold-100: #ffb800;
     --color-gold-200: #ff9f00;
+    --color-light-gold-100: #f7e6b2;
+    --text-huge: 8.5rem;
 }
+
+/* Apply Helvetica globally */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
