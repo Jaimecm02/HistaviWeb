@@ -7,52 +7,75 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto px-4">
       <h1 class="text-4xl font-bold text-white mb-8 text-center">Aortic Root Deformation Analysis</h1>
       
-      <div class="max-w-4xl mx-auto text-gray-300 space-y-6">
-        <p class="text-lg">
-          Deformation analysis is a sophisticated computational approach that meticulously quantifies and visualizes structural changes in the aortic root following Transcatheter Aortic Valve Replacement (TAVR) procedures.
+      <div class="max-w-4xl mx-auto text-gray-300 space-y-8">
+        <p class="text-lg leading-relaxed">
+          Our advanced deformation analysis provides a computational framework for quantifying and visualizing structural changes in the aortic root following Transcatheter Aortic Valve Replacement (TAVR) procedures, enabling precise postoperative assessment.
         </p>
         
-        <h2 class="text-3xl font-bold text-white mt-8 mb-4">Key Objectives</h2>
-        
-        <div class="rounded-lg p-6">
-          <h3 class="text-2xl font-bold text-white mb-4">1. Precise Measurement</h3>
-          <ul class="list-disc list-inside text-gray-300 space-y-2">
-            <li>Track deformations across multiple anatomical sections</li>
-            <li>Provide comprehensive structural insights</li>
-          </ul>
-        </div>
-        
-        <div class="rounded-lg p-6 mt-6">
-          <h3 class="text-2xl font-bold text-white mb-4">2. Computational Methodologies</h3>
-          <div class="text-gray-300 space-y-4">
-            <h4 class="text-xl font-semibold">Strain Analysis</h4>
-            <ul class="list-disc list-inside">
-              <li>Measures material deformation under stress</li>
-              <li>Quantifies local and global structural changes</li>
-              <li>Provides insights into tissue elasticity and response</li>
+        <div class="space-y-8">
+          <h2 class="text-3xl font-bold text-white pt-6 border-t border-gray-700">Key Analytical Objectives</h2>
+          
+          <div class="bg-neutral-900 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-bold text-white mb-4">1. Precise Structural Measurement</h3>
+            <ul class="list-disc list-inside space-y-3 pl-5">
+              <li>Tracking of deformations across all anatomical sections</li>
+              <li>Detailed structural analysis with quantitative metrics</li>
+              <li>Sectional deformation rate measurement (3 or 6 sections per slice)</li>
+              <li>Voxel-based analysis calculating deformation ratios between models</li>
             </ul>
-            
-            <h4 class="text-xl font-semibold mt-4">Finite Element Modeling</h4>
-            <ul class="list-disc list-inside">
-              <li>Creates detailed computational models</li>
-              <li>Simulates structural behavior under different conditions</li>
-              <li>Predicts potential long-term structural adaptations</li>
+          </div>        
+          
+          <div class="bg-neutral-900 rounded-md p-6 shadow-lg">
+            <h3 class="text-2xl font-bold text-white mb-4">2. Centerline Coordinate Analysis</h3>
+            <ul class="list-disc list-inside space-y-3 pl-5">
+              <li>Centerline curve points stored in JSON format with (x, y, z) coordinates</li>
+              <li>Integration with Image Viewer to generate cross-sections using centerline coordinates</li>
+              <li>Precise spatial mapping of aortic root geometry</li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-900 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-bold text-white mb-4">3. Volumetric Regions of Interest</h3>
+            <ul class="list-disc list-inside space-y-3 pl-5">
+              <li><strong>Left Ventricular Outflow Tract (TSVI)</strong></li>
+              <li><strong>TAVI to Annulus (TAVR)</strong></li>
+              <li><strong>Annulus to Coronary Artery (RING)</strong></li>
+            </ul>
+          </div>
+
+          <div class="bg-neutral-900 rounded-lg p-6 shadow-lg">
+            <h3 class="text-2xl font-bold text-white mb-4">4. Statistical Analysis</h3>
+            <ul class="list-disc list-inside space-y-3 pl-5">
+              <li><strong>Basic statistics:</strong> Mean, median, standard deviation, coefficient of variation</li>
+              <li><strong>Range analysis:</strong> Minimum, maximum, data range</li>
+              <li><strong>Distribution percentiles:</strong> 25th, 50th (median), 75th percentiles</li>
+              <li><strong>Normality assessment:</strong> Below, within, and above normal range classification</li>
+              <li><strong>Trend analysis:</strong> Maximum slope, max slope slice, total data points</li>
             </ul>
           </div>
         </div>
         
-        <div class="rounded-lg p-6 mt-6">
-          <h3 class="text-2xl font-bold text-white mb-4">Clinical Significance</h3>
-          <p class="text-gray-300">
-            Deformation analysis goes beyond simple measurements. It:
-            <ul class="list-disc list-inside mt-2">
-              <li>Supports personalized treatment strategies</li>
-              <li>Helps predict potential long-term structural responses</li>
-              <li>Enhances understanding of patient-specific anatomical adaptations</li>
-            </ul>
+        <div class="bg-neutral-900 rounded-lg p-6 shadow-lg mt-8">
+          <h2 class="text-2xl font-bold text-white mb-4">Clinical Applications</h2>
+          <p class="mb-4">
+            Our deformation analysis provides critical insights for clinical decision-making:
           </p>
+          <ul class="list-disc list-inside space-y-3 pl-5">
+            <li>Enables personalized treatment planning and valve selection</li>
+            <li>Predicts long-term structural responses to TAVR implantation</li>
+            <li>Provides patient-specific anatomical adaptation metrics</li>
+            <li>Supports postoperative monitoring and intervention planning</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
+  <div class="mt-12 mb-8 flex justify-start max-w-4xl mx-auto px-4">
+    <a href="/registration" class="inline-flex items-center px-6 py-3 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-white transition-colors duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Previous: Registration
+    </a>
+  </div>
 </Layout>

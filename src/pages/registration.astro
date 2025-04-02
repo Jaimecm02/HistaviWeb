@@ -16,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
         <h3 class="text-2xl font-bold text-white mb-4">Challenges and Solutions</h3>
         <p>Medical imaging presents unique challenges when comparing images, particularly when segmentations are saved in .mha format from 3DSlicer. A critical issue arises from varying image spacings between pre- and post-intervention images.</p>
         
-        <div class="bg-gray-800 p-4 rounded-lg">
+        <div class="bg-neutral-800 p-4 rounded-lg">
           <p class="text-orange-400 font-bold">⚠ Critical Preprocessing Step: Addressing Varied Image Spacings</p>
           <p class="text-gray-300">Resolve spacing inconsistencies using SimpleITK's <code>ResampleImageFilter</code> to ensure accurate comparative analysis.</p>
         </div>
@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
           <li><strong><code>n_iter</code>:</strong> Maximum optimization iterations (default: 100)</li>
         </ul>
 
-        <pre class="bg-gray-800 p-4 rounded-lg overflow-x-auto text-sm">
+        <pre class="bg-neutral-800 p-4 rounded-lg overflow-x-auto text-sm">
 <code class="language-python"># Image Registration Workflow
 fixed = sitk.ReadImage('fixed_image.mha')
 moving = sitk.ReadImage('moving_image.mha')
@@ -75,7 +75,7 @@ registered_image = registrator.get_registered_image()</code>
         </div>
 
         <h3 class="text-xl font-semibold text-white mt-4">Methodological Considerations</h3>
-        <div class="bg-gray-800 p-4 rounded-lg">
+        <div class="bg-neutral-800 p-4 rounded-lg">
           <p class="text-orange-400 font-bold">⚠ Critical Note: Expert Validation Required</p>
           <p class="text-gray-300">While automated registration techniques provide powerful tools, they are not infallible. Always complement automated methods with expert visual and clinical validation.</p>
         </div>
@@ -112,4 +112,18 @@ registered_image = registrator.get_registered_image()</code>
       </div>
     </div>
   </section>
+  <div class="mt-12 mb-8 flex justify-between max-w-4xl mx-auto px-4">
+    <a href="/segmentation" class="inline-flex items-center px-6 py-3 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-white transition-colors duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Previous: Segmentation
+    </a>
+    <a href="/deformation" class="inline-flex items-center px-6 py-3 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-white transition-colors duration-200">
+      Next: Deformation
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>
+    </a>
+  </div>
 </Layout>
