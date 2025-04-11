@@ -1,6 +1,6 @@
 ---
 import {Image} from 'astro:assets';
-import evolutImage from '../assets/CoreValve-Evolut-Pro.webp';
+import evolutImage from '../assets/CoreValve-Evolut.png';
 import acurateImage from '../assets/ACURATE_neo2.png';
 import edwardsImage from '../assets/Edwards.avif';
 ---
@@ -16,8 +16,8 @@ import edwardsImage from '../assets/Edwards.avif';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- CoreValve Evolut -->
-        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
-          <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
+        <div class="bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-gray-300/40 transition-shadow duration-300">
+          <div class="h-80 bg-neutral-900 p-4 flex items-center justify-center">
             <Image src={evolutImage} alt="Medtronic CoreValve" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
@@ -29,8 +29,8 @@ import edwardsImage from '../assets/Edwards.avif';
         </div>
         
         <!-- Acurate Neo -->
-        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
-          <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
+        <div class="bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-gray-300/40 transition-shadow duration-300">
+          <div class="h-80 bg-neutral -900 p-4 flex items-center justify-center">
             <Image src={acurateImage} alt="Boston Scientific ACURATE neo" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
@@ -42,8 +42,8 @@ import edwardsImage from '../assets/Edwards.avif';
         </div>
 
         <!-- Edwards Sapien -->
-        <div class="bg-neutral-900 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:shadow-gray-300/30 hover:shadow-xl">
-          <div class="h-80 bg-gray-300 p-4 flex items-center justify-center">
+        <div class="bg-neutral-900 p-6 rounded-xl shadow-lg hover:shadow-gray-300/40 transition-shadow duration-300">
+          <div class="h-80 bg-neutral-900 p-4 flex items-center justify-center">
             <Image src={edwardsImage} alt="Edwards SAPIEN Valve" class="max-h-full object-contain" />
           </div>
           <div class="p-6">
